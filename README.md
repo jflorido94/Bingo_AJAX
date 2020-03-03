@@ -1,2 +1,2 @@
 # Bingo_AJAX
-Bingo realizado en DAWES
+Bingo realizado en DAWECliente

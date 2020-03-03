@@ -1,0 +1,72 @@
+h1{
+  font-size: 3.5rem;
+}
+
+.ocultar {
+  display: none;
+
+}
+
+// #micarton{
+// border: 1px solid darkblue;
+// }
+#micarton>.carton>div>.hueco{
+  background-color:black;
+  border: 1px solid purple;
+}
+#micarton>.carton>div>.casilla{
+  font-size: 2rem;
+  text-align: center;
+  height: 3rem;
+  border: 1px solid purple;
+  
+}
+#micarton>.carton>div>.casilla:hover{
+   cursor: pointer;
+}
+#micarton>.carton>div>.sacado{
+  background-color: yellow;
+}
+
+// #rivales{
+// border: 1px dashed red;
+// }
+
+// #rivales>div>.carton{
+// background-color: darkolivegreen;
+// }
+
+#rivales>div>.carton>div>.hueco{
+  background-color:black;
+  border: 1px solid purple;
+}
+#rivales>div>.carton>div>.casilla{
+  font-size: 1.5rem;
+  text-align: center;
+  height: 2rem;
+  border: 1px solid purple;
+}
+#rivales>div>.carton>div>.sacado{
+background-color: yellow;}
+
+#menu, #botones{
+  height: 100vh;
+  border: 1px solid black;
+}
+
+span.ball {
+  background: blueviolet;
+   border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 15px;
+  text-align: center;
+  width: 1.6em; 
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}

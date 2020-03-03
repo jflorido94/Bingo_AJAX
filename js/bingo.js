@@ -1,10 +1,26 @@
-
+/**
+ * Array donde se guardan los distintos jugadores posicion 0 es el jugador humano
+ */
 var jugadores = [];
+/**
+ * Precio de cada carton
+ */
 var precio;
+/**
+ * cantidad de jugadores seleccionados
+ */
 var njugadores;
+/**
+ * velocidad de juego ms/bola
+ */
 var velocidad;
+/**
+ * intervalo que saca las bolas
+ */
 var intervalo;
-var ganadores = 0;
+/**
+ * bombo donde estan las bolas
+ */
 var bombo;
 
 function comenzar() {
@@ -54,11 +70,16 @@ function iniciar(){
   intervalo= setInterval(bombo.sacarbola, velocidad);
 }
 
+function bingo() {
+  stop();
+  bombo.cantarbingo();
+  iniciar();
+}
 
 /**
  * para el intervalo que saca las bolas
  */
-function parar(){
+function stop(){
   clearInterval(intervalo);
 }
 

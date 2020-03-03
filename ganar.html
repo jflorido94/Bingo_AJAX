@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <title>Tenemos ganador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+  <center>
+    <br>
+    <div id="lose" class="">
+      <img src="img/incorrecto.png" height="132" width="132" />
+      <h2>Lo siento ...</h2>
+      <h3>El <span id="ganadorRival">...</span>º rival ha ganado.</h3>
+    </div>
+    <div id="win" class="">
+      <img src="img/correcto.png" height="132" width="132" />
+      <h2>Enhorabuena</h2>
+      <h3>Has ganado.</h3>
+    </div>
+    <div id="otros" class="ocultar">
+      <h4>Tambien ha ganado:</h4>
+    </div>
+    <h3>Cada ganador se ha llevado un premio de <span id="premio">...</span> €</h3><br>
+    <button class="btn btn-default" onclick="window.opener.location.reload();
+                    window.close();"><b>Comenzar bingo nuevo</b></button>
+  </center>
+</body>
+
+</html>

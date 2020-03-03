@@ -71,13 +71,13 @@
           <h3><span class="ball" id="bh5">?</span></h3>
         </div>
         <div class="row my-5 d-flex justify-content-center">
-          <button class="btn btn-success btn-lg"> ¡¡BINGO!! </button>
+          <button class="btn btn-success btn-lg" onclick="bingo()"> ¡¡BINGO!! </button>
         </div>
-        <div class="row my-5 d-flex justify-content-center">
+        <!-- <div class="row my-5 d-flex justify-content-center">
           <button class="btn btn-primary">Pause</button>
-        </div>
+        </div> -->
         <div class="row my-5 d-flex justify-content-center">
-          <button class="btn btn-danger"> Stop </button>
+          <button class="btn btn-danger" onclick="stop()"> Stop </button>
         </div>
       </div>
       <div class="col-10 p-5" id="juego">

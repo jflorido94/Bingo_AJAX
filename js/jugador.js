@@ -9,7 +9,11 @@ constructor(esrival=true){
   this.rival = esrival;
   this.aciertos = 0;
 }
-
+/**
+ * Tacha las casillas con el numero sacado del bombo de los cartones de los rivales,
+ * comprueba si estan todas tachadas y si es asi canta bingo
+ * @param {integer} numero numero sacado del bombo
+ */
 autoTacharCasilla(numero){
    
   for (let i = 0; i < this.carton.xlineas.length; i++) {

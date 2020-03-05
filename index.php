@@ -46,7 +46,7 @@
         <div class="row my-3">
           <label for="velocidad">Velocidad de juego</label>
           <select class="custom-select" id="velocidad">
-            <option value="100">Super rápido (1 seg/bola)</option>
+            <option value="1000">Super rápido (1 seg/bola)</option>
             <option value="2500">Rápido (2,5 seg/bola)</option>
             <option value="5000" selected>Normal (5 seg/bola)</option>
             <option value="7500">Lento 7,5 seg/bola</option>
@@ -73,26 +73,39 @@
         <div class="row my-5 d-flex justify-content-center">
           <button class="btn btn-success btn-lg" onclick="bingo()"> ¡¡BINGO!! </button>
         </div>
-        <!-- <div class="row my-5 d-flex justify-content-center">
-          <button class="btn btn-primary">Pause</button>
-        </div> -->
-        <div class="row my-5 d-flex justify-content-center">
-          <button class="btn btn-danger" onclick="stop()"> Stop </button>
+        <div class="row my-5 d-flex justify-content-center" >
+          <button class="btn btn-primary" id="play" onclick="iniciar()"> Play </button>
+        </div>
+        <div class="row my-5 d-flex justify-content-center" >
+          <button class="btn btn-danger ocultar" id="stop" onclick="stop()"> Stop </button>
         </div>
       </div>
       <div class="col-10 p-5" id="juego">
-        <div class="ocultar" id="micarton">
+        <div id="instrucciones">
+          <h3>Instrucciones de Juego</h3>
+          <ul>
+            <li>Elige en el menú de la derecha las opciones de juego</li>
+            <li>Para cantar Bingo clica en el boton cuando todos tus numeros hayan salido</li>
+            <li>Si el Bingo es correcto saldrá una ventana con la cantidad del premio obtenido</li>
+            <li>Si el bingo no es correcto la partida seguira automaticamente</li>
+            <li>Necesitas tener habilitada las ventanas emergentes en tu navegador</li>
+            <li>Cuando un rival consigue bingo, comprueba que jugadores han conseguido premio</li>
+            <li>Puedes parar la partida pulsando en stop y retomarla pulsando en play</li>
+          </ul>
+        </div>
 
-          
-          
+
+        <div class="ocultar" id="micarton">
+          <h2>Jugador</h2>
+
+
         </div>
         <div class="row rivales ocultar" id="rivales">
 
-          
-      </div>
+        </div>
 
+      </div>
     </div>
-  </div>
 </body>
 
 </html>

@@ -1,21 +1,20 @@
 class Carton {
 
+  /**cantidad de jugadores */
+  static numero=0;
+
   /**
    * Crea un carton con numeros tapados y ordenados por columnas y filas
    */
   constructor() {
-    /**
-     * Carton ordenado por columnas (9 columnas de 3 numeros)
-     */
+    /** Carton ordenado por columnas (9 columnas de 3 numeros) */
     this.xcolumnas = [];
 
     this.rellenarColumnas();
 
     //quitamos las 4 casillas por cada fila del carton
     this.casillasOcultas();
-    /**
-     * Carton ordenado por filas (3 filas de 9 columnas)
-     */
+    /** Carton ordenado por filas (3 filas de 9 columnas) */
     this.xlineas = this.igualarCartonDesde(this.xcolumnas);
   }
   //Antigua forma se quedaba pillado a veces por repeticion de los numeros del random
@@ -106,8 +105,13 @@ class Carton {
     }
   }
 
+  /**
+   * Muestra en la pagina web los cartones de los diferentes jugadores distinguiendo entre rivales y el propio jugador
+   * @param {boolean} rival true y es un jugador rival
+   */
   dibujar(rival = true) {
     if (rival) {
+      Carton.numero++;
       var div = document.createElement("div");
       div.classList.add("col-12", "col-lg-6");
       var carton = document.createElement("div");
@@ -153,6 +157,9 @@ class Carton {
         }
 
       }
+      var titulo = document.createElement("h4");
+      titulo.innerHTML = "Rival "+ Carton.numero;
+      div.appendChild(titulo);
       div.appendChild(carton);
       var sitio = document.getElementById("rivales");
       sitio.appendChild(div);
@@ -209,7 +216,10 @@ class Carton {
     }
 
   }
-
+/**
+ * Cambia la casilla como marcada para saber que ya a salido
+ * @param {integer} id posicion de la casilla pulsada por el jugador
+ */
   marcar(id){
     $('#'+id).toggleClass('sacado');
   }

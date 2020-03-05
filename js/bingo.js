@@ -1,28 +1,19 @@
-/**
- * Array donde se guardan los distintos jugadores posicion 0 es el jugador humano
- */
+/** Array donde se guardan los distintos jugadores posicion 0 es el jugador humano */
 var jugadores = [];
-/**
- * Precio de cada carton
- */
+/** Precio de cada carton */
 var precio;
-/**
- * cantidad de jugadores seleccionados
- */
+/**cantidad de jugadores seleccionados */
 var njugadores;
-/**
- * velocidad de juego ms/bola
- */
+/** velocidad de juego ms/bola */
 var velocidad;
-/**
- * intervalo que saca las bolas
- */
+/** intervalo que saca las bolas */
 var intervalo;
-/**
- * bombo donde estan las bolas
- */
+/**bombo donde estan las bolas */
 var bombo;
 
+/**
+ * funcion principal que recoge los valores del menu e inicializa el juego
+ */
 function comenzar() {
 
   //Recogemos las opciones de juego de la pagina
@@ -44,7 +35,7 @@ function comenzar() {
 
   }
 
-  jugar();
+  iniciar();
   
   
   cambiarMenu();
@@ -55,12 +46,7 @@ function comenzar() {
  */
 function cambiarMenu(){
   $('#menu, #botones').toggleClass('ocultar');
-  $('#micarton, #rivales').toggleClass('ocultar');
-}
-
-
-function jugar(){
-  iniciar();
+  $('#micarton, #rivales, #instrucciones').toggleClass('ocultar');
 }
 
 /**
@@ -68,8 +54,12 @@ function jugar(){
  */
 function iniciar(){
   intervalo= setInterval(bombo.sacarbola, velocidad);
+  $('#play, #stop').toggleClass('ocultar');
 }
 
+/**
+ * Llamada para comprobar si el jugador tiene completo un bingo
+ */
 function bingo() {
   stop();
   bombo.cantarbingo();
@@ -81,6 +71,7 @@ function bingo() {
  */
 function stop(){
   clearInterval(intervalo);
+  $('#play, #stop').toggleClass('ocultar');
 }
 
 

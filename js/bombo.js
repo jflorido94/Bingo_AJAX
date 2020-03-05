@@ -5,14 +5,10 @@ class Bombo {
    */
   constructor() {
 
-    /**
-     * numeros restantes en el interior del bombo
-     */
+    /** numeros restantes en el interior del bombo */
     this.restantes = [];
 
-    /**
-     * numeros que ya han salido del bombo
-     */
+    /**numeros que ya han salido del bombo */
     this.salidos = [];
 
     this.rellenarbombo();
